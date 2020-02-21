@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Coline</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style/MyWebsite.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+ 
+  
+
+
+  <style>
+    html {
+  scroll-behavior: smooth;
+}
+  body {
+      position: relative;
+      font-family: 'Cardo', serif; 
+  }
+  #section1 {padding-top:50px;height:700px;color: #fff; background-color: #D7D3D2; color:#DB9D8E;}
+  #section2 {padding-top:50px;height:500px;color: #D7D3D2; background-color: #ffffff;}
+  #section3 {padding-top:50px;height:500px;color: #fff; background-color: #D7D3D2;}
+  .sticky {
+  position: fixed;
+  top: 0;
+  width: 100%; 
+  
+}
+
+ #navbar{
+   
+ }
+ label {
+    display: block;
+    font: 1rem 'Fira Sans', sans-serif;
+}
+
+input,
+label {
+    margin: .4rem 0;
+}
+
+.note {
+    font-size: .8em;
+}
+
+
+  </style>
+  <script>
+      window.onscroll = function() {myFunction()};
+      
+      var navbar = document.getElementById("navbar");
+      var sticky = navbar.offsetTop;
+      
+      function myFunction() {
+        if (window.pageYOffset >= sticky) {
+          navbar.classList.add("sticky")
+        } else {
+          navbar.classList.remove("sticky");
+        }
+      }
+      </script>
+  
+</head>
+<div class="bd-example">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" id="navbar">
+      <a class="navbar-brand"  class="nav-link" href="index.html">Coline</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="true" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="navbar-collapse collapse show" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+
+              <li class="nav-item dropdown">
+                <a class="nav-link " href="appointment.html">Appointments</a>
+                </div>
+              </li>
+            </ul>
+        <!-- 
+        <form class="form-inline my-2 my-lg-0">
+         <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+        -->
+      </div>
+      
+    </nav>
+    </div>
+
+
+
+<div id="section1" class="container-fluid">
+  <h1 class="paragraphTitle">Appointments</h1>
+  <div class="w3-container">
+  <p class ="paragraphs"> 
+      Book Your appointment with Coline today down below !
+    </p>
+    <form>
+            <div class="form-group">
+                    <label for="ClientName">Name</label>
+                    <input type="ClientName" class="form-control" id="ClientName" placeholder="Name">
+                  </div>
+            <div class="form-group">
+              <label for="exampleFormControlInput1">Email address</label>
+              <input type="email" class="form-control" id="emailaddress" placeholder="name@example.com">
+            </div>
+            <div class="form-group">
+                    <label for="ClientNumber">Phone Number</label>
+                    <input type="ClientNumber" class="form-control" id="ClientNumber" placeholder="Number">
+                  </div>
+            <div class="form-group">
+              <label for="daydate">What day can we call you ?</label>
+            <input type="date" id="daydate" name="trip-start" class="form-control" value="2019-07-22" min="2019-01-01" max="2019-12-31">
+            </div>
+            <div class="form-group">
+                    <label for="ClientName">Put a time that works for you. *Please include AM &amp; PM*</label>
+                    <input type="ClientName" class="form-control" id="timedate" placeholder="Time">
+                  </div>
+
+            <div class="form-group">
+              <label for="exampleFormControlTextarea1">Comments &amp; Questions</label>
+              <textarea class="form-control" id="Comments_and_Questions" rows="3"></textarea>
+            </div>
+        </div>
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-app.js"></script>
+
+          </form>
+          <p style=" padding-top:5px; "><button type="button" class="btn btn-primary btn-sm"
+            id="sendMessaage" onclick="SubmitClick_2()">
+            Send Message</button></p>
+            <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase.js"></script>
+                <script>
+                // Initialize Firebase
+                var config = {
+                  apiKey: "AIzaSyDV0ozWVddN-6PvFwMErp22tlvWE7e8Prs",
+                  authDomain: "blameroger-bbc49.firebaseapp.com",
+                  databaseURL: "https://blameroger-bbc49.firebaseio.com",
+                  projectId: "blameroger-bbc49",
+                  storageBucket: "blameroger-bbc49.appspot.com",
+                  messagingSenderId: "890150284557",
+                  appId: "1:890150284557:web:aa51d3008d3bca79eb5444"
+                };
+                firebase.initializeApp(config);
+                </script>
+                <script src="js/appointment.js">   </script>
+
+
+</div>
+
+
+
+
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Coline</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style/MyWebsite.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <script src="js/message.js"></script>
+
+
+
+
+  </style>
+  <script>
+      window.onscroll = function() {myFunction()};
+      var navbar = document.getElementById("navbar");
+      var sticky = navbar.offsetTop;
+      function myFunction() {
+        if (window.pageYOffset >= sticky) {
+          navbar.classList.add("sticky")
+        } else {
+          navbar.classList.remove("sticky");
+        }
+      }
+      </script>
+</head>
+<div class="bd-example">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" id="navbar">
+      <a class="navbar-brand" class="nav-link" href="index.html">Coline</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="true" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="navbar-collapse collapse show" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item ">
+            <a class="nav-link" href="#section1">Welcome </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="#section3">About Us</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link " href="appointment.html">Book an appointment</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+    </nav>
+    </div>
+
+
+
+<div id="section1" class="container-fluid">
+  <h1 class="paragraphTitle">Welcome</h1>
+  <div class="w3-container">
+  <p class ="paragraphs"> Welcome! Coline is a speech to text calculator that helps the visually impaired reach mathematic solutions
+    </p>
+    </div>
+
+</div>
+<div id="section2" class="container-fluid">
+  <h1 class="paragraphTitle">Portfolios</h1>
+  <p class ="paragraphs"> Here are a few portfolios of people's cars that we've helped create !</p>
+  <p class= "link"><a href = ""> Portfolio 1</a></p>
+  <p class= "link"><a href = ""> Portfolio 2 </a></p>
+  <p class= "link"><a href = "">Portfolio 3</a></p>
+
+</div>
+<div id="section3" class="container-fluid">
+ <h1  class="paragraphTitle">Contact</h1>
+ <p class ="paragraphs"> Want to Conatact us? Leave a message, email us at Coline@gmail.com or connect with us on <a href =""><span style="color: white;">LinkedIn !</span></a></p>
+ <div class="form-group">
+    <label for="comment">Message:</label>
+    <textarea id ="WebsiteMessage" placeholder ="Type here ..." class="form-control" rows="5"></textarea>
+    <p style=" padding-top:5px; "><button type="button" class="btn btn-primary btn-sm"
+      id="sendMessage" onclick="SubmitClick()">
+      Send Message</button></p>
+  </div>
+</div>
+
+
+
+<script src="https://www.gstatic.com/firebasejs/5.9.0/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyDV0ozWVddN-6PvFwMErp22tlvWE7e8Prs",
+      authDomain: "blameroger-bbc49.firebaseapp.com",
+      databaseURL: "https://blameroger-bbc49.firebaseio.com",
+      projectId: "blameroger-bbc49",
+      storageBucket: "blameroger-bbc49.appspot.com",
+      messagingSenderId: "890150284557",
+      appId: "1:890150284557:web:aa51d3008d3bca79eb5444"
+    };
+    firebase.initializeApp(config);
+  </script>
+
+
+</body>
+</html>
